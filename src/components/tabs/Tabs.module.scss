@@ -1,0 +1,45 @@
+.button {
+  cursor: pointer;
+  width: 168px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid rgb(223, 229, 236);
+  background: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
+.tabs button:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.tabs button:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.button:hover {
+  background: rgb(33, 150, 243);
+  color: white;
+}
+
+.activeButton {
+  cursor: pointer;
+  width: 168px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid rgb(223, 229, 236);
+  background: rgb(33, 150, 243);
+  color: white;
+  text-transform: uppercase;
+}
+
+.button:disabled {
+  cursor: no-drop;
+}
+
+.button:disabled:hover {
+  border: 1px solid rgb(223, 229, 236);
+  background: rgb(255, 255, 255);
+  color: rgba(16, 16, 16, 0.3);
+}

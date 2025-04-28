@@ -1,0 +1,19 @@
+.header {
+    padding: 50px;
+}
+
+.header {
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ticked {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
