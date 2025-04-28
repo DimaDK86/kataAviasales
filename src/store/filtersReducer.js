@@ -1,12 +1,12 @@
 import { TOGGLE_ALL, TOGGLE_STOP } from "./actions";
 
 const initialState = {
-  allChecked: false,
+  allChecked: true,
   stops: {
-    noStops: false,
-    oneStop: false,
-    twoStops: false,
-    threeStops: false,
+    noStops: true,
+    oneStop: true,
+    twoStops: true,
+    threeStops: true,
   },
 };
 

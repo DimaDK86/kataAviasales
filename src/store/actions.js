@@ -1,6 +1,4 @@
-import AviasalesService from "../services/AviasalesService";
-
-const aviasalesService = new AviasalesService();
+import { fetchTickets as fetchTicketsHelper } from "../components/helpers/aviasalesApi"; // Импортируйте новый хелпер
 
 export const FETCH_TICKETS_REQUEST = "FETCH_TICKETS_REQUEST";
 export const FETCH_TICKETS_SUCCESS = "FETCH_TICKETS_SUCCESS";
@@ -14,7 +12,7 @@ export const fetchTickets = () => async (dispatch) => {
   dispatch({ type: FETCH_TICKETS_REQUEST });
 
   try {
-    const tickets = await aviasalesService.fetchTickets();
+    const tickets = await fetchTicketsHelper(); // Используйте новый хелпер вместо сервиса
     dispatch({ type: FETCH_TICKETS_SUCCESS, payload: tickets });
   } catch (error) {
     dispatch({ type: FETCH_TICKETS_FAILURE, payload: error.message });

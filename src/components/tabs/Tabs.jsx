@@ -3,15 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { setActiveTab } from "../../store/actions";
 import styles from "./Tabs.module.scss";
 
+const tabs = [
+  { id: "cheap", label: "Самый дешевый" },
+  { id: "fast", label: "Самый быстрый" },
+  { id: "optimal", label: "Оптимальный", disabled: true },
+];
+
 const Tabs = () => {
   const dispatch = useDispatch();
   const activeTab = useSelector((state) => state.tabs.activeTab);
-
-  const tabs = [
-    { id: "cheap", label: "Самый дешевый" },
-    { id: "fast", label: "Самый быстрый" },
-    { id: "optimal", label: "Оптимальный", disabled: true },
-  ];
 
   return (
     <div className={styles.tabs}>
